@@ -1,0 +1,1 @@
+#2D lists are simply lists of a list. A 2D list has the structure; list[row][column]

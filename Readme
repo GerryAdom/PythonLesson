@@ -1,0 +1,75 @@
+Electrical Measurement Analyzer
+
+A small Python-based electrical measurement analyzer that calculates basic circuit quantities and classifies measurements against predefined limits.
+
+Features
+Calculates electrical power from voltage and current
+Calculates resistance using voltage and current
+Checks whether calculated power exceeds a specified limit
+Classifies voltage as LOW, NORMAL, or HIGH
+Handles invalid numerical input
+Handles division-by-zero errors
+Repeats measurements using a while loop
+Separates reusable electrical calculations into a Python module
+
+main.py
+
+Contains the main program logic, including:
+
+User input
+Error handling
+Measurement loop
+Displaying results
+electricals.py
+
+Contains reusable functions for:
+
+Power calculation
+Resistance calculation
+Power-limit checking
+Voltage classification
+Calculations
+
+Power:
+
+P = V × I
+
+Resistance:
+
+R = V / I
+Default Limits
+Parameter	Limit
+Power	100 W
+Normal voltage range	10–50 V
+Example
+Enter voltage: 24
+Enter current: 3
+
+=== Electrical Measurement ===
+Voltage: 24.0 V
+Current: 3.0 A
+Resistance: 8.00 ohms
+Power: 72.00 W
+Power Status: NORMAL
+Voltage Status: NORMAL
+Python Concepts Practiced
+
+This project was built while learning:
+Variables
+User input
+Data types
+Functions
+Parameters and return values
+Conditional statements
+while loops
+break
+try/except
+ValueError
+ZeroDivisionError
+Python modules
+import
+Module aliases
+if __name__ == "__main__":
+Formatted strings
+Purpose
+This project is part of my progression in Python, with an emphasis on applying programming concepts to Electrical and Electronic Engineering problems.

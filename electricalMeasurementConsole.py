@@ -1,3 +1,4 @@
+running = True
 while True:
     try:
         voltage = float(input('Enter voltage: '))
@@ -16,6 +17,7 @@ while True:
         choice = input("Do you want to enter another measurement? (yes/no): ")
         
         if choice == "no":
+            running = False
             break
     
     except ValueError:

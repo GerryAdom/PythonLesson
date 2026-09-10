@@ -26,4 +26,17 @@ a better way is to use the 'with' keyword
 It has the following structure;
 with open("name.txt", "mode") as "alias":
     alias.mode(".....: .../n)
+    
+We can also read the data one line at a time. This makes the program display information one at at time starting with the very first data in the file.
+This is made possible by the .readline() or a for loop to iterate over the data. without the for loop, we'd have to run the program everytime we want to display a line.
+
+Readline is for when we want to manually track the reading ourselves but for larger data, it's impractical to use since, for every data, we'd have to type readline.
+This is solved using a for loop.
+
+Then we have the readlines. This function display the data as a list. Now readline displays each element of the data separately as a string and the readlines displays them as a list.
+The difference between the three is that;
+
+read prints all the elements of the data as a string
+readline prints the data line-by-line
+readlines prints the data together as a list
 '''

@@ -12,9 +12,14 @@ upper_limit = 50
 low_voltage = 0
 high_voltage = 0
 normal_voltage = 0
+invalid_measurement = 0
 
 with open("measurements.txt", "r") as file:
     for line in file:
+        if not line.strip(): #the line.strip() eliminates the whitespaces since Python considers whitespaces to be characters and would not consider a line with only whitespaces to be empty.The line.strp() eliminates the whitespaces evaluating to a true. The not operator negates the boolean value returned by line.strip(), so if the line is empty or contains only whitespace, the condition evaluates to True, and the code inside the if block is executed.
+            print("Empty line detected.")
+            continue
+        
         try:
             voltage, current, recorded_power = pf.parse_measurements(line)
             
@@ -48,10 +53,9 @@ with open("measurements.txt", "r") as file:
             if highest_calculated_power < calculated_power:
                 highest_calculated_power = calculated_power
                 
-        except ValueError:
-            print("Invalid Measurement")
-        except IndexError:
-            print("Invalid Measurement")    
+        except (ValueError, IndexError):
+            invalid_measurement += 1
+            print("Invalid Measurement")   
             
 average_voltage = total_voltage/counts
             
@@ -66,3 +70,4 @@ print(f"Low Voltage: {low_voltage}")
 print(f"Normal Voltage: {normal_voltage}")
 print(f"High Voltage: {high_voltage}")
 print(f"Highest Calculated Power: {highest_calculated_power} W")
+print(f"Invalid Measurements: {invalid_measurement}")

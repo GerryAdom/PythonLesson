@@ -1,0 +1,6 @@
+['Voltage:  24.0 V | Current: 3.0 A | Power: 72.0 W']
+['Voltage: 12.0 V | Current: 2.0 A | Power: 24.0 W']
+['Voltage: 48.0 V | Current: 1.0 A | Power: 48.0 W' ] 
+['Voltage: abc V| Current: 1.1 A | Power: 34.0 W']
+
+['Voltage: abc V| Current: 1.1 A]
